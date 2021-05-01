@@ -17,7 +17,7 @@ services:
       - "traefik.enable=false"
   pgadmin:
     container_name: pgadmin
-    image: dpage/pgadmin4:4.30
+    image: dpage/pgadmin4:5.2
     expose:
       - "80"
     environment:
@@ -30,7 +30,7 @@ services:
       - "traefik.http.routers.pgadmin.rule=Host(`pgadmin.localhost`)"
   keycloak:
     container_name: keycloak
-    image: jboss/keycloak:12.0.3
+    image: jboss/keycloak:12.0.4
     expose:
       - "8080"
     environment:
@@ -50,7 +50,7 @@ services:
       - "traefik.http.services.traefik.loadbalancer.server.port=8080"
   traefik:
     container_name: traefik
-    image: library/traefik:v2.4.5
+    image: library/traefik:v2.4.8
     ports:
       - "80:80"
       - "8090:8080"
