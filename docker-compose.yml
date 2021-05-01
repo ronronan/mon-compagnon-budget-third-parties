@@ -3,7 +3,8 @@ version: '2.4'
 services:
   postgres:
     container_name: postgres
-    image: postgres:13.2
+    build: postgres/
+    image: ronronan/postgresql-fr:13.2
     ports:
       - "5432:5432"
     expose:
