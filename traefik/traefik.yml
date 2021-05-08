@@ -8,6 +8,8 @@ entryPoints:
 providers:
   docker:
     defaultRule: "Host(`{{ trimPrefix `/` .Name }}.localhost`)"
+  file:
+    filename: /etc/traefik/proxy-config.yml
 
 # API and dashboard configuration
 api:

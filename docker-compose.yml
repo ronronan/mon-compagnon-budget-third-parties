@@ -60,6 +60,7 @@ services:
       - "8080"
     volumes:
       - "./traefik/traefik.yml:/etc/traefik/traefik.yml"
+      - "./traefik/proxy-config.yml:/etc/traefik/proxy-config.yml:ro"
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
     # labels:
     #   - "traefik.enable=true"

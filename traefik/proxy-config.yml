@@ -1,0 +1,32 @@
+http:
+  middlewares:
+    frontend:
+      stripPrefix:
+        prefixes:
+          - "/"
+    backend:
+      stripPrefix:
+        prefixes:
+          - "/"
+  routers:
+    frontend:
+      rule: "Host(`monbudget.localhost`)"
+      middlewares:
+        - "frontend"
+      service: "frontend"
+      entryPoints: ["web"]
+    backend:
+      rule: "Host(`monbudget-backend.localhost`)"
+      middlewares:
+        - "backend"
+      service: "backend"
+      entryPoints: ["web"]
+  services:
+    frontend:
+      loadBalancer:
+        servers:
+          - url: http://172.17.0.1:8080
+    backend:
+      loadBalancer:
+        servers:
+          - url: http://172.17.0.1:3000
