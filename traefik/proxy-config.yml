@@ -25,8 +25,8 @@ http:
     frontend:
       loadBalancer:
         servers:
-          - url: http://172.30.48.1:8080
+          - url: http://172.17.0.1:8080
     backend:
       loadBalancer:
         servers:
-          - url: http://172.30.48.1:3000
+          - url: http://172.17.0.1:3000

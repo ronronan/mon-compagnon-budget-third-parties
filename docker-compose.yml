@@ -38,11 +38,13 @@ services:
       KEYCLOAK_USER: admin
       KEYCLOAK_PASSWORD: admin
       DB_VENDOR: postgres
-      DB_ADDR: host.docker.internal
+      DB_ADDR: 172.17.0.1
       DB_PORT: 5432
       DB_DATABASE: keycloak
       DB_USER: keycloak
       DB_PASSWORD: keycloak123
+    volumes:
+      - "./keycloak/morel-auth:/opt/jboss/keycloak/themes/morel-auth/"
     network_mode: bridge
     labels:
       - "traefik.enable=true"
