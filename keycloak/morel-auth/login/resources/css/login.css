@@ -9,7 +9,7 @@ body {
 	margin: 0;
 }
 
-.form {
+.login-container {
 	margin: auto;
 	background: #fff;
 	width: 300px;
@@ -20,14 +20,14 @@ body {
 	box-shadow: 0px 0px 20px 0px #189ab4;
 }
 
-.form img {
+.login-container img {
 	height: 128px;
 	width: 128px;
 	margin: auto;
 	display: block;
 }
 
-.form h2 {
+.login-container h2 {
 	margin: 0 0 20px;
 	line-height: 1;
 	color: #189AB4;
@@ -35,11 +35,11 @@ body {
 	font-weight: 300;
 	text-align: center;
 }
-.form .bold {
+.login-container .bold {
 	font-weight: 500;
 }
 
-.form input {
+.login-container input {
 	outline: none;
 	display: block;
 	width: 100%;
@@ -54,12 +54,12 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.form input:focus {
+.login-container input:focus {
 	color: #333;
 	border: 1px solid #75E6DA;
 }
 
-.form .btn-submit {
+.login-container .btn-submit {
 	cursor: pointer;
 	background: #189AB4;
 	width: 100%;
@@ -70,7 +70,7 @@ body {
 	font-weight: 400;
 }
 
-.form .btn-submit:hover{
+.login-container .btn-submit:hover{
 	background: #05445E;
 }
 
