@@ -42,6 +42,7 @@
   <div class="${properties.kcLoginClass!}">
     <div id="kc-header" class="${properties.kcHeaderClass!}">
       <div id="kc-header-wrapper" class="${properties.kcHeaderWrapperClass!}">${kcSanitize(msg("loginTitleHtml",(realm.displayNameHtml!'')))?no_esc}</div>
+      <img src="${url.resourcesPath}/img/logo.png" class="login-title-logo">
     </div>
     <div class="${properties.kcFormCardClass!}">
       <header class="${properties.kcFormHeaderClass!}">
@@ -68,11 +69,11 @@
                 <span class="subtitle"><span class="required">*</span> ${msg("requiredFields")}</span>
               </div>
               <div class="col-md-10">
-                <h1 id="kc-page-title"><#nested "header"></h1>
+                <h1 id="kc-page-title" class="login-service-title"><#nested "header"></h1>
               </div>
             </div>
           <#else>
-            <h1 id="kc-page-title"><#nested "header"></h1>
+            <h1 id="kc-page-title" class="login-service-title"><#nested "header"></h1>
           </#if>
         <#else>
           <#if displayRequiredFields>
