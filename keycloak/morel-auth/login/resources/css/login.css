@@ -14,6 +14,7 @@ body {
   font-weight: 800;
   text-align: center;
   margin: 0 0 24px 0;
+  display: none;
 }
 
 .login-service-title {
@@ -23,8 +24,8 @@ body {
 .login-title-logo {
   display: block;
   margin: 0 auto;
-  width: 256px;
-  height: 256px;
+  width: 200px;
+  height: 200px;
 }
 
 .login-container {
