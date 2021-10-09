@@ -4,7 +4,7 @@ services:
   postgres:
     container_name: postgres
     build: postgres/
-    image: ronronan/postgresql-fr:13.4
+    image: ronronan/postgresql-fr:14.0
     ports:
       - "5432:5432"
     expose:
@@ -18,7 +18,7 @@ services:
       - "traefik.enable=false"
   pgadmin:
     container_name: pgadmin
-    image: dpage/pgadmin4:5.7
+    image: dpage/pgadmin4:6.0
     expose:
       - "80"
     environment:
@@ -64,11 +64,6 @@ services:
       - "./traefik/traefik.yml:/etc/traefik/traefik.yml"
       - "./traefik/proxy-config.yml:/etc/traefik/proxy-config.yml:ro"
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
-    # labels:
-    #   - "traefik.enable=true"
-    #   - "traefik.http.routers.traefik.entrypoints=web"
-    #   - "traefik.http.routers.traefik.rule=Host(`traefik.localhost`)"
-    #   - "traefik.http.services.traefik.loadbalancer.server.port=8080"
     network_mode: bridge
 
 volumes:
