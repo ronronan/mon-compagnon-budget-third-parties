@@ -31,7 +31,7 @@ services:
       - "traefik.http.routers.pgadmin.rule=Host(`pgadmin.localhost`)"
   keycloak:
     container_name: keycloak
-    image: jboss/keycloak:15.0.2
+    image: quay.io/keycloak/keycloak:15.0.2
     expose:
       - "8080"
     environment:
